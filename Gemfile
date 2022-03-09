@@ -43,6 +43,8 @@ gem "excon"
 
 gem "devise"
 
+gem 'devise-bootstrap-views', '~> 1.0'
+
 # gem 'rest-client', '~> 1.8'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

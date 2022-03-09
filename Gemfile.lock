@@ -96,6 +96,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     digest (3.1.0)
     erubi (1.10.0)
     excon (0.91.0)
@@ -233,6 +234,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
+  devise-bootstrap-views (~> 1.0)
   excon
   jbuilder
   jsbundling-rails
