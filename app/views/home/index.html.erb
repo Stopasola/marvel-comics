@@ -6,4 +6,8 @@
         title="Popover title" 
         data-bs-content="Amazing content, right ?">
         Click to toggle popover
+
+
+<%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+
 </button>  
