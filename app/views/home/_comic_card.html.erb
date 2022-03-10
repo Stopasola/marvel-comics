@@ -1,0 +1,12 @@
+<% @comics.each do |comic| %>
+	<div class="comic-card">
+		<div class="comic-header">
+					<%= image_tag [[comic["thumbnail"]["path"], "portrait_uncanny"].join('/'), comic["thumbnail"]["extension"]].join('.'), :class => "img_preview"  %>
+		</div>
+		<div class="comic-content">
+			<div class="comic-content-header">
+				<h3 class="comic-title"> <%= comic["title"] %> </h3>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -1,13 +1,9 @@
-<h1>Welcome, this is the home page</h1>  
-  
-<button type="button" 
-        class="btn btn-lg btn-danger" 
-        data-bs-toggle="popover" 
-        title="Popover title" 
-        data-bs-content="Amazing content, right ?">
-        Click to toggle popover
+<div class="container">	
+	<%= render 'home/comic_card' %>
+	<div class="footer mb-4">
+		<button type="button" class="btn btn-light btn-right font-weight-bold"><strong>Previous</strong></button>
 
-
-<%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
-
-</button>  
+		<button type="button" class="btn btn-light btn-left"><strong>Next</strong></button>
+	</div>
+	<%#  <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+</div>
