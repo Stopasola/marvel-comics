@@ -1,0 +1,8 @@
+<div class="container">	
+	<%= render 'home/comic_card' %>
+	<div class="btn footer mb-4">
+ 	  <%= link_to 'Previous', search_comic_path(page: @page - 1, character: @character), :class => "btn btn-light btn-left font-weight-bold"%>
+	  <%= link_to 'Next', search_comic_path(page: @page + 1, character: @character), :class => "btn btn-light btn-right font-weight-bold"%>
+	</div>
+	<%#  <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+</div>
