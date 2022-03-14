@@ -1,3 +1,3 @@
 # Marvel Comics 
 
-[Marvel](/assets/cover.jpeg)
+[Marvel](/assets/images/cover.jpeg)
