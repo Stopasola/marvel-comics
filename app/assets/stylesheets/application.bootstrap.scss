@@ -2,6 +2,19 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
 
+
+// Heart over effect
+
+.heart {
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.heart:hover {
+  background: url("heart_hover.png") no-repeat;
+}
+
 // NavBar Components
 
 .navbar{
@@ -12,8 +25,8 @@
 }
 .marvel-logo, .d-flex {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: center;
+    margin-right: center;
     width: 100%;
 }
 
@@ -23,6 +36,38 @@
 }
 
 // Home Page 
+
+.button_heart {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  top: 0;
+  left: 0;
+}
+
+.comic-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.img_preview {
+  max-height:100%; 
+  max-width:100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.heart_effect {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  background-color: transparent;
+}
 
 body {
   height: 100%;
@@ -85,10 +130,7 @@ a:hover {
   display: inline-block;
 }
 
-.img_preview {
-    max-height:100%; 
-    max-width:100%;
-}
+
 
 .comic-card:hover {
   -webkit-transform: scale(1.03);

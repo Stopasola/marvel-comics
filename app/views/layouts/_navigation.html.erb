@@ -1,15 +1,16 @@
 <nav class="navbar sticky-top">
 	<div class="row mx-auto">
-		<div class="col-9">
-
-			<div class="marvel-logo mt-4">
+		<div class="col-9 ">
+			<div class="marvel-logo mt-4 justify-content-center">
 				<%= image_tag "marvel_logo.png", class: 'image'%>
 			</div>
-
-			<form class="d-flex mt-4">
-				<input class="form-control" type="search" placeholder="e.g. Deadpool" aria-label="Search">
-				<%# <button class="btn btn-outline-success" type="submit">Search</button> %>
-			</form>
+			<div class="d-flex mt-4 justify-content-center">
+				<%= form_tag search_comic_path, remote: true, method: :get  do %>
+					<div class="form-control input-group-btn">
+						<%= text_field_tag :character, params[:character], placeholder: "e.g. Deadpool" %>
+					</div>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </nav>

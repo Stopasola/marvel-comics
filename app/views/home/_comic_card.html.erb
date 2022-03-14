@@ -1,12 +1,20 @@
 <% @comics.each do |comic| %>
 	<div class="comic-card">
 		<div class="comic-header">
-					<%= image_tag [[comic["thumbnail"]["path"], "portrait_uncanny"].join('/'), comic["thumbnail"]["extension"]].join('.'), :class => "img_preview"  %>
+			<%= image_tag comic.cover_img, :class => "img_preview"  %>
+			<div class="heart_effect">
+				<% if comic.upvoted %>
+					<%= button_to(image_tag("heart_on.png", class: "heart"), delete_upvote_path(id: comic.id),  method: "delete", class: "button_heart") %>
+				<% else %>
+					<%= button_to(image_tag("heart_off.png", class: "heart"), add_upvote_path(id: comic.id),  method: "post", class: "button_heart") %>
+				<% end %>
+			</div>
 		</div>
 		<div class="comic-content">
 			<div class="comic-content-header">
-				<h3 class="comic-title"> <%= comic["title"] %> </h3>
+				<h3 class="comic-title"> <%= comic.title %> </h3>
 			</div>
 		</div>
 	</div>
 <% end %>
+
