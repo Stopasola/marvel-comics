@@ -9,8 +9,10 @@ class Comic
     end
 
     def self.fetch_comics(page)
-			parser = ComicsParser.new(call_api(page))
-			parser.comics
+			Rails.cache.fetch([self, :fetch_comics], expires_in: 24.hours) { 
+				parser = ComicsParser.new(call_api(page))
+				parser.comics
+		  }
     end
 
 		def upvoted
