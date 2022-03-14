@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
   # get "home/index"  
   root "home#index"  
+  get "search_comic", to: 'characters#search'
+  
+  post "add_upvote", to: 'upvotes#create'
+  delete "delete_upvote", to: 'upvotes#delete'
   
 end
